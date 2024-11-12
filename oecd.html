@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Admissions Chart</title>
+    <link rel="stylesheet" href="Chart1.css">
+    <link rel="stylesheet" href="Chart2.css">
+    
+    <style>
+        body {
+            background-color: #f5f7fa; /* Matching color for body background */
+        }
+    
+        /* Masthead styling */  
+        .masthead {
+            position: relative;
+            background: url('cvd.png') no-repeat center center;
+            background-size: cover;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            height: 520px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;    
+        }
+    
+        /* Dark overlay */
+        .masthead::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+    
+        /* Text overlay on top of the image */
+        .masthead-content {
+            position: relative;
+            z-index: 2;
+        }
+    
+        .masthead h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 10px;
+        }
+    
+        .masthead p {
+            font-size: 1.2rem;
+            color: white;
+        }
+    
+        /* Main content styling */
+        .main-content {
+            max-width: 800px;
+            padding: 20px;
+            margin: 30px auto;
+            color: #333;
+            text-align: center;
+            line-height: 1.6; /* Increase line height for readability */
+            font-size: 1.1rem; /* Adjust font size */
+        }
+    
+        /* Main content section styling */
+        .info-section, .chart-section {
+            background-color: #f5f7fa; /* Updated to match body background */
+            padding: 20px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    
+        .chart-section {
+            background-color: #fff;
+        }
+    
+        .chart-container {
+            width: 100%;
+            height: 400px;
+        }
+    
+        /* Footer styling for charts */
+        .chart-section .footer {
+            margin-top: 20px; /* Add space between chart and footer */
+            font-size: 0.8rem; /* Reduce font size by 20% */
+            color: #666; /* Slightly lighter color for readability */
+        }
+    </style>
+</head>
+<body>
+
+<!-- Masthead Section -->
+<header class="masthead">
+    <div class="masthead-content">
+        <h1>Project Title: Cardiovascular Disease</h1>
+        <p>4 charts related to our project</p>
+        <p>Presented by Lim Chee Yung & Gian Tze Ee</p>
+    </div>
+</header>
+
+<div class="main-content">
+    <p>Welcome to our data visualization project, which delves into the critical and complex topic of cardiovascular disease. As one of the leading causes of death worldwide, cardiovascular disease affects millions and imposes significant social, economic, and healthcare burdens.</p>
+    <p>Using four data visualizations, we aim to shed light on key aspects of cardiovascular disease, including its prevalence, risk factors, trends over time, and impacts on different populations. These insights are essential for understanding the scope of the issue and for informing efforts to reduce the incidence of cardiovascular disease and improve public health outcomes.</p>
+</div>
+
+<div class="container mt-5">
+    <div class="row">
+        <!-- Left Text Section -->
+        <div class="col-md-3 info-section">
+            <h3>Avoidable hospital admissions</h3>
+            <p>Congestive heart failure (CHF) is a widely prevalent long-term condition. Effective treatment is well established, and much of it can be delivered by primary care. Hospital admissions are largely avoidable and are therefore used as a marker of quality and access to primary care, with the proviso that very low admissions rates may also partly reflect reduced access to acute care.</p>
+            <p>Hospital admission rates for heart failure varied 13-fold across OECD countries in 2021. Progress is being made with the average admission rate across OECD countries decreasing between 2011 and 2019. During the pandemic, the rate decreased even further in most countries. An average drop of about 20% was reported across OECD countries between 2019 and 2021.</p>
+        </div>
+        
+        <!-- Right Chart Section -->
+        <div class="col-md-9 chart-section">
+            <div id="Chart1" class="chart-container"></div>
+            <div class="footer">
+                Note: Latest data from 2020 (and for Costa Rica from 2022) instead of 2021. <br>
+                Source: OECD Health Statistics 2023.
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-5">
+    <div class="row">
+        <!-- Left Text Section -->
+        <div class="col-md-3 info-section">
+            <h3>Avoidable hospital admissions</h3>
+            <p>Congestive heart failure (CHF) is a widely prevalent long-term condition. Effective treatment is well established, and much of it can be delivered by primary care. Hospital admissions are largely avoidable and are therefore used as a marker of quality and access to primary care, with the proviso that very low admissions rates may also partly reflect reduced access to acute care.</p>
+            <p>Hospital admission rates for heart failure varied 13-fold across OECD countries in 2021. Progress is being made with the average admission rate across OECD countries decreasing between 2011 and 2019. During the pandemic, the rate decreased even further in most countries. An average drop of about 20% was reported across OECD countries between 2019 and 2021.</p>
+        </div>
+        
+        <!-- Right Chart Section -->
+        <div class="col-md-9 chart-section">
+            <div id="Chart2" class="chart-container"></div>  
+            <div class="footer">
+                Note: Latest data from 2020 (and for Costa Rica from 2022) instead of 2021. <br>
+                Source: OECD Health Statistics 2023.
+            </div>
+        </div>
+    </div>
+</div>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="Chart1.js"></script>
+<script src="Chart2.js"></script>
+
+</body>
+</html>
